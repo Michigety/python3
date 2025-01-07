@@ -1,0 +1,28 @@
+{% extends 'components/base.html' %}
+{% block title %}My Board{% endblock %}
+{% block content %}
+<table>
+    <thead>
+    <tr>
+        <td>num</td>
+        <td>title</td>
+        <td>author</td>
+        <td>created</td>
+    </tr>
+    </thead>
+    <tbody>
+    {% if posts %}
+    {% for post in posts %}
+    <tr>
+        <td>{{ posts.total - ((posts.page - 1) * posts.per_page) - loop.index + 1 }}</td>
+        <td>{{ post.title }}</td>
+        <td>{{ post.user.username }}</td>
+        <td>{{ post.created }}</td>
+    </tr>
+    {% endfor %}
+    {% endif %}
+    <tr></tr>
+    </tbody>
+</table>
+<a href="{{ url_for('post.write') }}">Write</a>
+{% endblock %}

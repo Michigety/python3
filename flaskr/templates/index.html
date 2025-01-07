@@ -1,0 +1,8 @@
+{% extends 'components/base.html' %}
+{% block title %}{{ obj.title }}{% endblock %}
+{% block content %}
+<main>
+  <p>{{ obj.name }}</p>
+  <p><a href="{{ url_for('board.index') }}">{{ obj.content }}</a></p>
+</main>
+{% endblock %}

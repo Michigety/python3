@@ -1,0 +1,12 @@
+{% extends 'components/base.html' %}
+{% block title %}My Board - Write a post{% endblock %}
+{% block content %}
+<form action="" method="post">
+    {{ form.csrf_token }}
+    {{ form.title.label }}
+    {{ form.title() }}
+    {{ form.content.label }}
+    {{ form.content() }}
+    <button type="submit">Done</button>
+</form>
+{% endblock %}

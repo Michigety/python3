@@ -1,3 +1,5 @@
 .idea
 .flaskr2
 __pycache__
+migrations
+flaskr.sqlite3

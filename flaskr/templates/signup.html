@@ -1,0 +1,16 @@
+{% extends 'components/base.html' %}
+{% block title %}My Board - Sign Up{% endblock %}
+{% block content %}
+<form action="" method="post">
+    {{ form.csrf_token }}
+    {{ form.username.label }}
+    {{ form.username() }}
+    {{ form.password.label }}
+    {{ form.password() }}
+    {{ form.password_validation.label }}
+    {{ form.password_validation() }}
+    {{ form.email.label }}
+    {{ form.email() }}
+    <button type="submit">Done</button>
+</form>
+{% endblock %}
