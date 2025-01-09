@@ -1,0 +1,30 @@
+[project]
+name = "flaskr2"
+version = "1.0.0"
+description = "Michigety's toy box"
+authors = [
+    { name = "Michigety", email = "bizanlil94@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "python-dotenv", "flask", "flask-wtf", "flask-sqlalchemy", "email-validator"
+]
+classifiers = []
+
+
+[project.urls]
+Homepage = "https://github.com/Michigety/python3"
+
+
+[build-system]
+requires = ["flit_core<4"]
+build-backend = "flit_core.buildapi"
+
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.coverage.run]
+branch = true
+source = ["flaskr2"]

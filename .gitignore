@@ -2,4 +2,6 @@
 .flaskr2
 __pycache__
 migrations
+instance
 flaskr.sqlite3
+tests
