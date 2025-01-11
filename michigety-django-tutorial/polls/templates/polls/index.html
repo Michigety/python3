@@ -1,0 +1,12 @@
+{% if latest_question_list %}
+<ul>
+  {% for question in latest_question_list %}
+  <!-- templates에 url 사용할 때는 아래와 같이 사용할 수 있음. -->
+  <!-- 첫 번째 인자는 namespace:view 형식. namespace는 각 app의 urls.py에 app_name 변수로 명시해야 함. -->
+  <!-- 두 번째 인자부터는 Target view의 인자값 -->
+  <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>No polls are available.</p>
+{% endif %}
