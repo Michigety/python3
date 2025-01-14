@@ -1,0 +1,18 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "",
+    "FUNCTIONS_WORKER_RUNTIME": "python",
+    "APPLICATIONINSIGHTS_CONNECTION_STRING": "",
+    "FUNCTIONS_EXTENSION_VERSION": "~4",
+    "WEBSITE_CONTENTAZUREFILECONNECTIONSTRING": "",
+    "WEBSITE_CONTENTSHARE": "5b038-secproj-fa8ca6",
+    "BlobContainerName": "users",
+    "OpenAIServiceEndpointSwedenCentral": "https://5b038-azure-openai.openai.azure.com/",
+    "OpenAIServiceKeySwedenCentral": "",
+    "OpenAIServiceEndpointEastUs": "https://5b038-azure-openai2.openai.azure.com/",
+    "OpenAIServiceKeyEastUs": "",
+    "SpeechServiceRegion": "",
+    "SpeechServiceKey": ""
+  }
+}
