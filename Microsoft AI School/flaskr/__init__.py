@@ -24,10 +24,19 @@ def create_app():
     if os.path.exists(os.path.join(BASEDIR, 'config.py')):
         app.config.from_pyfile('config.py')
 
+    def format_datetime(value, format='%Y-%m-%d %H:%M:%S'):
+        return value.strftime(format)
+
+    app.jinja_env.filters['datetime'] = format_datetime
+
     db.init_app(app)
-    migrate.init_app(app, db, render_as_batch=True)
+    if app.config['SQLALCHEMY_DATABASE_URI'].startswith('sqlite'):
+        migrate.init_app(app, db, render_as_batch=True)
+    else:
+        migrate.init_app(app, db)
     from . import models
 
+    # 학습 당시, main, questions, answers, auth 네 가지로 구분했지만, 정리 겸 살짝 바꿈.
     from .views import main, board, post
     app.register_blueprint(main.bp)
     app.register_blueprint(board.bp)
