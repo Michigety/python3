@@ -11,6 +11,7 @@ bp = Blueprint('post', __name__, url_prefix='/board/post')
 def index():
     return 'asdf'
 
+
 @bp.route('/write', methods=['GET', 'POST'])
 def write():
     form = PostForm()
